@@ -25,14 +25,50 @@ https://github.com/GezegenselCore/aura-pro-ephemeris-service
 
 After creating the repo on GitHub, run these commands locally:
 
-```bash
-cd aura-pro-ephemeris-service
-git push -u origin main
-```
+### Option 1: Using Personal Access Token (Recommended)
 
-If you get authentication errors, you may need to:
-- Use GitHub Personal Access Token (PAT) instead of password
-- Or use SSH: `git remote set-url origin git@github.com:GezegenselCore/aura-pro-ephemeris-service.git`
+1. **Create GitHub Personal Access Token:**
+   - Go to: https://github.com/settings/tokens
+   - Click "Generate new token" → "Generate new token (classic)"
+   - Name: `aura-pro-ephemeris-service-push`
+   - Scopes: Check `repo` (full control of private repositories)
+   - Click "Generate token"
+   - **Copy the token** (you won't see it again!)
+
+2. **Push using token:**
+   ```bash
+   cd aura-pro-ephemeris-service
+   git push -u origin main
+   ```
+   - Username: `cprkdr` (or your GitHub username)
+   - Password: **Paste the Personal Access Token** (not your GitHub password)
+
+### Option 2: Using SSH (Alternative)
+
+1. **Set SSH remote:**
+   ```bash
+   cd aura-pro-ephemeris-service
+   git remote set-url origin git@github.com:GezegenselCore/aura-pro-ephemeris-service.git
+   ```
+
+2. **Push:**
+   ```bash
+   git push -u origin main
+   ```
+
+### Option 3: Fix Organization Permissions
+
+If you're a member of GezegenselCore organization:
+1. Go to: https://github.com/organizations/GezegenselCore/settings/members
+2. Ensure your account (`cprkdr`) has **Write** or **Admin** permission
+3. If not, ask organization owner to grant you access
+
+### Troubleshooting 403 Error
+
+If you still get `403 Permission denied`:
+- **Check:** Are you a member of `GezegenselCore` organization?
+- **Check:** Does the repo exist? Verify: https://github.com/GezegenselCore/aura-pro-ephemeris-service
+- **Try:** Use Personal Access Token (Option 1) - this usually works even without org membership if you created the repo
 
 ## C) Verify Push Success
 
