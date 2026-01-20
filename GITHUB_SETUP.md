@@ -19,9 +19,9 @@
 
 After creation, verify the URL is:
 ```
-https://github.com/gezegenselgames/gezegenselcore
+https://github.com/gezegenselgames/aura-pro-ephemeris-service
 ```
-(Or the actual path where the repo was created)
+(Or if created under GezegenselCore team: `https://github.com/gezegenselgames/gezegenselcore/aura-pro-ephemeris-service`)
 
 ## B) Push Local Code to GitHub
 
